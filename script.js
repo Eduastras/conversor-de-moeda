@@ -1,7 +1,14 @@
 // Cotação da moeda do dia.
-const USD = 5.37
-const EUR = 6.27
-const GBP = 7.20
+const USD = 5.37 // Dólar Américano
+const EUR = 6.27 // Euro
+const GBP = 7.20 // Libra Esterlina
+const JPY = 0.034 // Iene
+const AUD = 3.60 // Dólar Australino
+const CHF = 6.70 // Franco Suiço
+const CAD = 3.86 // Dólar Canadense
+const CNY = 0.77 // Renminbi (Yuan)
+const ARS = 0.0037 // Peso Argentina
+const TRY = 0.12 // Lira Turca
 
 // Obtendo os elementos DOM do formúlario.
 const form = document.querySelector("form")
@@ -33,8 +40,29 @@ form.onsubmit = function(event) {
         case "GBP":
             convertCurrency(amount.value, GBP, "£")
             break
+        case "JPY":
+            convertCurrency(amount.value, JPY, "¥")
+            break
+        case "AUD":
+            convertCurrency(amount.value, AUD, "$")
+            break
+        case "CHF":
+            convertCurrency(amount.value, CHF, "₣")
+            break
+        case "CAD":
+            convertCurrency(amount.value, CAD, "C$")
+            break
+        case "CNY":
+            convertCurrency(amount.value, CNY, "CN¥")
+            break
+        case "ARS":
+            convertCurrency(amount.value, ARS, "$")
+            break
+        case "TRY":
+            convertCurrency(amount.value, TRY, "₺")
+            break
         default:
-            window.alert("Valor inválido!")
+            window.alert("Moeda Inválida!")
     }
   
 }
