@@ -99,7 +99,7 @@ function convertCurrency (amount, price, symbol) {
 
 // Convertendo a moeda para Reais Brasil.
 function formatCurrencyBRL(value) {
-    // Converte para número para utilizar o .toLocaleString para formatar no padrão BRL (R$ 00,00)
+    // Converte para número para utilizar o .toLocaleString para formatar no padrão BRL (R$ 00,00).
     return Number(value).toLocaleString("pt-BR", {
         style: "currency",
         currency: "BRL",
